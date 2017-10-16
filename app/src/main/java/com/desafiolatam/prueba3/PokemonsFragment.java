@@ -1,5 +1,6 @@
 package com.desafiolatam.prueba3;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -13,10 +14,24 @@ import com.desafiolatam.prueba3.data.Nodes;
 
 public class PokemonsFragment extends Fragment {
     private PokemonsAdapter adapter;
+    private int estado = 0;
+
+    public int getEstado() {
+        return estado;
+    }
+
+    public void setEstado(int estado) {
+        this.estado = estado;
+    }
+
+    @SuppressLint("ValidFragment")
+    public PokemonsFragment(int estado) {
+        switch (this.estado = estado) {
+        }
+    }
 
     public PokemonsFragment() {
     }
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -36,14 +51,19 @@ public class PokemonsFragment extends Fragment {
         RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.pokemonsRv);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setHasFixedSize(true);
+        if (getEstado() == 0) {
+            adapter = new PokemonsAdapter(new Nodes().pokemons(), getContext());
+        } else if (getEstado() > 0) {
+            adapter = new PokemonsAdapter(new Nodes().favorites(), getContext());
+        }
 
-        adapter = new PokemonsAdapter(new Nodes().pokemons(), getContext());
+
         recyclerView.setAdapter(adapter);
 
 
     }
 
-    public static Fragment newInstance() {
+    public static Fragment newInstance(int tipo) {
         return new PokemonsFragment();
     }
 }

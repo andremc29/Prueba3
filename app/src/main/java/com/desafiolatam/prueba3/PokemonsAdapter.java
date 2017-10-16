@@ -18,11 +18,11 @@ import com.google.firebase.database.ValueEventListener;
  * Created by amuno on 15-10-2017.
  */
 
-public class PokemonsAdapter extends FirebaseRecyclerAdapter<Pokemon,PokemonsAdapter.PokemonHolder> {
+public class PokemonsAdapter extends FirebaseRecyclerAdapter<Pokemon, PokemonsAdapter.PokemonHolder> {
 
+    private String id;
     private Context context;
     private Pokemon pokemon;
-    private String id;
 
     public PokemonsAdapter(DatabaseReference ref, Context context) {
         super(Pokemon.class, R.layout.fragment_item_list, PokemonHolder.class, ref);
@@ -39,18 +39,18 @@ public class PokemonsAdapter extends FirebaseRecyclerAdapter<Pokemon,PokemonsAda
             @Override
             public void onClick(View view) {
                 pokemon = getItem(viewHolder.getAdapterPosition());
-                id = pokemon.getContent().replace(" ", "").toLowerCase();
-                final DatabaseReference dbref = new Nodes().favorites().child(id);
-                dbref.addListenerForSingleValueEvent(new ValueEventListener() {
+                id = pokemon.getContent().replace(" ", "").toUpperCase();
+                final DatabaseReference bdreffavorites = new Nodes().favorites().child(id);
+                bdreffavorites.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
                         Pokemon poke = dataSnapshot.getValue(Pokemon.class);
-                        if (poke == null || poke.toString().trim().length()==0) {
+                        if (poke == null || poke.toString().trim().length() == 0) {
                             new Nodes().favorites().child(id).setValue(pokemon);
-                            Toast.makeText(context, "Agrega a favorito " + dbref, Toast.LENGTH_SHORT).show();
+                            Toast.makeText(context, "Agrega favorito " + bdreffavorites, Toast.LENGTH_SHORT).show();
                         } else {
                             new Nodes().favorites().child(id).removeValue();
-                            Toast.makeText(context, "Elimina de favorito " + dbref, Toast.LENGTH_SHORT).show();
+                            Toast.makeText(context, "Elimina favorito " + bdreffavorites, Toast.LENGTH_SHORT).show();
                         }
 
                     }
@@ -65,9 +65,9 @@ public class PokemonsAdapter extends FirebaseRecyclerAdapter<Pokemon,PokemonsAda
 
     }
 
-    public static class PokemonHolder extends RecyclerView.ViewHolder{
+    public static class PokemonHolder extends RecyclerView.ViewHolder {
 
-private TextView content,id;
+        private TextView content, id;
 
         public PokemonHolder(View itemView) {
             super(itemView);

@@ -17,15 +17,7 @@ public class PokemonsAdapterPrincipal extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        switch (position) {
-            case 0:
-                return PokemonsFragment.newInstance();
-            case 1:
-                return FavoriteFragment.newIntance();
-
-            default:
-                return PokemonsFragment.newInstance();
-        }
+        return PokemonsFragment.newInstance(position);
     }
 
     @Override
