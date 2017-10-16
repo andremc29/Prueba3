@@ -31,15 +31,15 @@ public class PokemonsAdapter extends FirebaseRecyclerAdapter<Pokemon,PokemonsAda
 
     @Override
     protected void populateViewHolder(final PokemonHolder viewHolder, Pokemon model, int position) {
-        TextView textView = viewHolder.name;
-        textView.setText(model.getName());
-        TextView textViewnumber = viewHolder.number;
-        textViewnumber.setText(model.getNumber());
+        TextView textView = viewHolder.content;
+        textView.setText(model.getContent());
+        TextView textViewnumber = viewHolder.id;
+        textViewnumber.setText(model.getId());
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 pokemon = getItem(viewHolder.getAdapterPosition());
-                id = pokemon.getName().replace(" ", "").toLowerCase();
+                id = pokemon.getContent().replace(" ", "").toLowerCase();
                 final DatabaseReference dbref = new Nodes().favorites().child(id);
                 dbref.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
@@ -67,12 +67,12 @@ public class PokemonsAdapter extends FirebaseRecyclerAdapter<Pokemon,PokemonsAda
 
     public static class PokemonHolder extends RecyclerView.ViewHolder{
 
-private TextView name,number;
+private TextView content,id;
 
         public PokemonHolder(View itemView) {
             super(itemView);
-            number = (TextView) itemView.findViewById(R.id.numberpokemonsTv);
-            name = (TextView) itemView.findViewById(R.id.pokemonsTv);
+            id = (TextView) itemView.findViewById(R.id.idTv);
+            content = (TextView) itemView.findViewById(R.id.contentTv);
         }
     }
 

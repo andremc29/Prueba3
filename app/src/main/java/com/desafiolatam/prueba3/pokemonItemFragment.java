@@ -10,7 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.desafiolatam.prueba3.dummy.DummyContent.DummyItem;
+import com.desafiolatam.prueba3.models.PokemonContent;
+import com.desafiolatam.prueba3.models.PokemonContent.PokemonItem;
 
 /**
  * A fragment representing a list of Items.
@@ -66,7 +67,7 @@ public class pokemonItemFragment extends Fragment {
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            recyclerView.setAdapter(new MyItemRecyclerViewAdapter(DummyContent.ITEMS, mListener));
+            recyclerView.setAdapter(new MyItemRecyclerViewAdapter(PokemonContent.ITEMS, mListener));
         }
         return view;
     }
@@ -101,6 +102,6 @@ public class pokemonItemFragment extends Fragment {
      */
     public interface OnListFragmentInteractionListener {
         // TODO: Update argument type and name
-        void onListFragmentInteraction(DummyItem item);
+        void onListFragmentInteraction(PokemonItem item);
     }
 }

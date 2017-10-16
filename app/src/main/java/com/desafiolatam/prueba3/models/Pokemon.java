@@ -5,22 +5,22 @@ package com.desafiolatam.prueba3.models;
  */
 
 public class Pokemon {
-    private String name;
-    private int number;
+    private String content;
+    private int id;
 
-    public String getName() {
-        return name;
+    public String getContent() {
+        return content;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setContent(String content) {
+        this.content = content;
     }
 
-    public int getNumber() {
-        return number;
+    public int getId() {
+        return id;
     }
 
-    public void setNumber(int number) {
-        this.number = number;
+    public void setId(int id) {
+        this.id = id;
     }
 }

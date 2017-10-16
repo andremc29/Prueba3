@@ -14,13 +14,13 @@
     tools:listitem="@layout/fragment_item">
 
     <TextView
-        android:id="@+id/numberpokemonsTv"
+        android:id="@+id/idTv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="right" />
 
     <TextView
-        android:id="@+id/pokemonsTv"
+        android:id="@+id/contentTv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical" />
