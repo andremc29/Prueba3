@@ -1,19 +1,22 @@
 package com.desafiolatam.prueba3.models;
 
 /**
- * Created by amuno on 15-10-2017.
+ * Created by amuno on 20-10-2017.
  */
 
 public class Pokemon {
-    private String content;
+    private String name;
     private int id;
 
-    public String getContent() {
-        return content;
+    public Pokemon() {
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getId() {
