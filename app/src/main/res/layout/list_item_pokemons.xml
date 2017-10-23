@@ -3,27 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/list"
-    android:name="com.desafiolatam.prueba3.pokemonItemFragment"
+    android:name="com.desafiolatam.prueba3.PokemonsFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginLeft="16dp"
     android:layout_marginRight="16dp"
     android:orientation="horizontal"
     app:layoutManager="LinearLayoutManager"
-    tools:context="com.desafiolatam.prueba3.PokemonFavoritesFragment"
-    tools:listitem="@layout/list_fragment_favorite_item">
-
-    <TextView
-        android:id="@+id/idTv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="right" />
-
-    <TextView
-        android:id="@+id/nameTv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical" />
-
+    tools:context="com.desafiolatam.prueba3.PokemonsFragment"
+    tools:listitem="@layout/fragment_pokemons">
 
 </LinearLayout>

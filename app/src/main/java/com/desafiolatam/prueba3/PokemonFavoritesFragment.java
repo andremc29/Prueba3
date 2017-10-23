@@ -25,7 +25,7 @@ public class PokemonFavoritesFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.list_fragment_favorite_item, container, false);
+        View view = inflater.inflate(R.layout.fragment_favorite_pokemons, container, false);
         RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.pokemonsfRv);
         recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), LinearLayoutManager.VERTICAL));
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
