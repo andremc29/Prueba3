@@ -16,7 +16,7 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 public class PokemonsFavoritesAdapter extends FirebaseRecyclerAdapter <Pokemon,PokemonsFavoritesAdapter.PokemonHolder> {
 
     public PokemonsFavoritesAdapter() {
-        super(Pokemon.class, R.layout.list_item_pokemons_favorites, PokemonHolder.class, new Nodes().pokemons());
+        super(Pokemon.class, R.layout.list_item_pokemons_favorites, PokemonHolder.class, new Nodes().favorites());
 
     }
 
