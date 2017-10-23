@@ -13,17 +13,11 @@ import android.view.ViewGroup;
 import com.desafiolatam.prueba3.adapters.PokemonsAdapter;
 
 public class PokemonsFragment extends Fragment {
-
-    public static PokemonsFragment newInstance() {
-        return new PokemonsFragment();
-    }
-
     public PokemonsFragment() {
     }
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public static PokemonsFragment newInstance() {
+        return new PokemonsFragment();
     }
 
     @Override

@@ -14,13 +14,13 @@ import com.desafiolatam.prueba3.adapters.PokemonsFavoritesAdapter;
 
 
 public class PokemonsFavoritesFragment extends Fragment {
+    public PokemonsFavoritesFragment() {
+    }
 
-    public  static PokemonsFavoritesFragment newInstance(){
+    public static PokemonsFavoritesFragment newInstance() {
         return new PokemonsFavoritesFragment();
     }
 
-    public PokemonsFavoritesFragment() {
-    }
 
     @Nullable
     @Override
@@ -40,10 +40,5 @@ public class PokemonsFavoritesFragment extends Fragment {
         PokemonsFavoritesAdapter adapter = new PokemonsFavoritesAdapter();
         recyclerView.setAdapter(adapter);
 
-    }
-
-    public interface OnListFragmentInteractionListener {
-        // TODO: Update argument type and name
-      //  void onListFragmentInteraction(PokemonItem item);
     }
 }
