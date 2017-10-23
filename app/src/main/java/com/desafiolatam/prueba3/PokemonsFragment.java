@@ -16,7 +16,7 @@ public class PokemonsFragment extends Fragment {
     private PokemonsAdapter adapter;
 
     public static PokemonsFragment newInstance() {
-        return PokemonsFragment.newInstance();
+        return new PokemonsFragment();
     }
 
     public PokemonsFragment() {

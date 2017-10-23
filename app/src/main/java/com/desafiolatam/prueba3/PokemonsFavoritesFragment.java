@@ -16,7 +16,7 @@ public class PokemonsFavoritesFragment extends Fragment {
     private PokemonsFavoritesAdapter adapter;
 
     public  static PokemonsFavoritesFragment newInstance(){
-        return PokemonsFavoritesFragment.newInstance();
+        return new PokemonsFavoritesFragment();
     }
 
     public PokemonsFavoritesFragment() {
