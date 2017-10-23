@@ -14,6 +14,8 @@ public class PokemonFavoritesFragment extends Fragment {
         return PokemonFavoritesFragment.newInstance();
     }
 
+    public PokemonFavoritesFragment() {
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
