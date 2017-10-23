@@ -12,6 +12,7 @@
     app:layoutManager="LinearLayoutManager"
     tools:context="com.desafiolatam.prueba3.PokemonsFragment"
     tools:listitem="@layout/fragment_pokemons">
+
     <TextView
         android:id="@+id/idTv"
         android:layout_width="match_parent"

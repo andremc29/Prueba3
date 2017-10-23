@@ -5,12 +5,24 @@ package com.desafiolatam.prueba3.models;
  */
 
 public class Pokemon {
+    private int id;
     private String name;
-    private String id;
 
     public Pokemon() {
     }
 
+    public Pokemon(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
     public String getName() {
         return name;
     }
@@ -19,11 +31,4 @@ public class Pokemon {
         this.name = name;
     }
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 }
