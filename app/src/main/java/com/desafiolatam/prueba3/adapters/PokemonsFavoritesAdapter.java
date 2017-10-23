@@ -23,19 +23,19 @@ public class PokemonsFavoritesAdapter extends FirebaseRecyclerAdapter <Pokemon,P
 
     @Override
     protected void populateViewHolder(PokemonsFavoritesAdapter.PokemonHolder viewHolder, Pokemon model, int position) {
-        viewHolder.id.setText(model.getId());
-        viewHolder.name.setText(model.getName());
+        viewHolder.idf.setText(model.getId());
+        viewHolder.namef.setText(model.getName());
 
     }
 
     public static class PokemonHolder extends RecyclerView.ViewHolder {
-        private TextView name, id;
+        private TextView namef, idf;
 
         public PokemonHolder(View itemView) {
             super(itemView);
 
-            id = (TextView) itemView.findViewById(R.id.idfTv);
-            name = (TextView) itemView.findViewById(R.id.namefTv);
+            idf = (TextView) itemView.findViewById(R.id.idfTv);
+            namef = (TextView) itemView.findViewById(R.id.namefTv);
         }
     }
 
