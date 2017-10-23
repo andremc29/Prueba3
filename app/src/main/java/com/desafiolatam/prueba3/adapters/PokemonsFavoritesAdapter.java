@@ -29,7 +29,7 @@ public class PokemonsFavoritesAdapter extends FirebaseRecyclerAdapter <Pokemon,P
     }
 
     public static class PokemonHolder extends RecyclerView.ViewHolder {
-        private TextView namef, idf;
+        private TextView idf,namef;
 
         public PokemonHolder(View itemView) {
             super(itemView);
