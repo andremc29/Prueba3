@@ -10,17 +10,17 @@
     android:layout_marginRight="16dp"
     android:orientation="horizontal"
     app:layoutManager="LinearLayoutManager"
-    tools:context="com.desafiolatam.prueba3.PokemonFavoritesFragment"
+    tools:context="com.desafiolatam.prueba3.PokemonsFavoritesFragment"
     tools:listitem="@layout/fragment_favorite_pokemons">
 
     <TextView
-        android:id="@+id/idTv"
+        android:id="@+id/idfTv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="right" />
 
     <TextView
-        android:id="@+id/nameTv"
+        android:id="@+id/namefTv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical" />

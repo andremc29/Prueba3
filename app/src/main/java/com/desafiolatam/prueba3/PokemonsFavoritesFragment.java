@@ -12,14 +12,14 @@ import android.view.ViewGroup;
 import com.desafiolatam.prueba3.adapters.PokemonsFavoritesAdapter;
 
 
-public class PokemonFavoritesFragment extends Fragment {
+public class PokemonsFavoritesFragment extends Fragment {
     private PokemonsFavoritesAdapter adapter;
 
-    public  static PokemonFavoritesFragment newInstance(){
-        return PokemonFavoritesFragment.newInstance();
+    public  static PokemonsFavoritesFragment newInstance(){
+        return PokemonsFavoritesFragment.newInstance();
     }
 
-    public PokemonFavoritesFragment() {
+    public PokemonsFavoritesFragment() {
     }
 
     @Override

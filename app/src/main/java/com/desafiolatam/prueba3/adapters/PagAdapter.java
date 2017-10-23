@@ -4,7 +4,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.desafiolatam.prueba3.PokemonFavoritesFragment;
+import com.desafiolatam.prueba3.PokemonsFavoritesFragment;
 import com.desafiolatam.prueba3.PokemonsFragment;
 
 /**
@@ -22,7 +22,7 @@ public class PagAdapter extends FragmentPagerAdapter {
          case 0:
              return PokemonsFragment.newInstance();
          case 1:
-             return PokemonFavoritesFragment.newInstance();
+             return PokemonsFavoritesFragment.newInstance();
          default:
              return PokemonsFragment.newInstance();
 
@@ -37,11 +37,11 @@ public class PagAdapter extends FragmentPagerAdapter {
     public CharSequence getPageTitle(int position) {
         switch (position) {
             case 0:
-                return "GeneralON 1";
+                return "Todos los pokemons";
             case 1:
-                return "SFFFECTION 2";
+                return "Favoritos";
             default:
-                return "GeneralON 1";
+                return "Todos los pokemons";
         }
 
     }
