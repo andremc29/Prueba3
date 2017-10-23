@@ -2,13 +2,18 @@ package com.desafiolatam.prueba3;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.DividerItemDecoration;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.desafiolatam.prueba3.adapters.PokemonsFavoritesAdapter;
 
 
 public class PokemonFavoritesFragment extends Fragment {
+    private PokemonsFavoritesAdapter adapter;
 
     public  static PokemonFavoritesFragment newInstance(){
         return PokemonFavoritesFragment.newInstance();
@@ -20,7 +25,14 @@ public class PokemonFavoritesFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.list_item_pokemons, container, false);
+        View view = inflater.inflate(R.layout.list_fragment_favorite_item, container, false);
+        RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.pokemonsfRv);
+        recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), LinearLayoutManager.VERTICAL));
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        recyclerView.setHasFixedSize(true);
+
+
+        recyclerView.setAdapter(adapter);
 
 
         return view;
