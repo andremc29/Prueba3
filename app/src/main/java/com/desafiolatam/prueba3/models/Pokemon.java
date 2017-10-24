@@ -2,6 +2,8 @@ package com.desafiolatam.prueba3.models;
 
 /**
  * Created by amuno on 20-10-2017.
+ * se cambia varias veces el modelo en el cual no se obtiene el error 
+ *
  */
 
 public class Pokemon {
