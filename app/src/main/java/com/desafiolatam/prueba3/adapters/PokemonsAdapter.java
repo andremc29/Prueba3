@@ -67,12 +67,11 @@ public class PokemonsAdapter extends FirebaseRecyclerAdapter<Pokemon, PokemonsAd
 
 
     public static class PokemonHolder extends RecyclerView.ViewHolder {
-        private TextView id,name;
+        private TextView name;
 
         public PokemonHolder(View itemView) {
             super(itemView);
 
-//            id = (TextView) itemView.findViewById(R.id.idTv);
             name = (TextView) itemView.findViewById(R.id.nameTv);
         }
     }
