@@ -24,7 +24,7 @@ public class PokemonsAdapter extends FirebaseRecyclerAdapter<Pokemon, PokemonsAd
     private Context context;
     private String key;
 
-    public PokemonsAdapter(DatabaseReference pokemons, Context context) {
+    public PokemonsAdapter() {
         super(Pokemon.class, R.layout.list_item_pokemons, PokemonHolder.class, new Nodes().pokemons());
 
     }

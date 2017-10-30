@@ -34,7 +34,7 @@ public class PokemonsFavoritesAdapter extends FirebaseRecyclerAdapter <Pokemon,P
         public PokemonHolder(View itemView) {
             super(itemView);
 
-            idf = (TextView) itemView.findViewById(R.id.idfTv);
+          //  idf = (TextView) itemView.findViewById(R.id.idfTv);
             namef = (TextView) itemView.findViewById(R.id.namefTv);
         }
     }
