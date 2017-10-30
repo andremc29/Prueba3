@@ -24,7 +24,7 @@ public class PokemonsAdapter extends FirebaseRecyclerAdapter<Pokemon, PokemonsAd
     private Context context;
     private String key;
 
-    public PokemonsAdapter() {
+    public PokemonsAdapter(DatabaseReference pokemons, Context context) {
         super(Pokemon.class, R.layout.list_item_pokemons, PokemonHolder.class, new Nodes().pokemons());
 
     }
@@ -48,10 +48,10 @@ public class PokemonsAdapter extends FirebaseRecyclerAdapter<Pokemon, PokemonsAd
                         Pokemon pm = dataSnapshot.getValue(Pokemon.class);
                         if (pm == null) {
                             new Nodes().favorites().child(key).setValue(pokemon);
-                            Toast.makeText(context, "Pokemon Añadido a Favoritos", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(context, "Agrega a Favoritos", Toast.LENGTH_SHORT).show();
                         } else {
                             new Nodes().favorites().child(key).removeValue();
-                            Toast.makeText(context, "Pokemon Removido de Favoritos", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(context, "Removido de Favoritos", Toast.LENGTH_SHORT).show();
                         }
 
                     }
