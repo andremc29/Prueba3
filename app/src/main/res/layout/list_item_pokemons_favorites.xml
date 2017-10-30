@@ -13,11 +13,6 @@
     tools:context="com.desafiolatam.prueba3.PokemonsFavoritesFragment"
     tools:listitem="@layout/fragment_favorite_pokemons">
 
-    <TextView
-        android:id="@+id/idfTv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="right" />
 
     <TextView
         android:id="@+id/namefTv"

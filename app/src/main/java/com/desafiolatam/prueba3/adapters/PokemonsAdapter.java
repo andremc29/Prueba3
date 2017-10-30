@@ -32,7 +32,7 @@ public class PokemonsAdapter extends FirebaseRecyclerAdapter<Pokemon, PokemonsAd
 
     @Override
     protected void populateViewHolder(final PokemonsAdapter.PokemonHolder viewHolder, Pokemon model, int position) {
-        viewHolder.id.setText(model.getId());
+//        viewHolder.id.setText(model.getId());
         viewHolder.name.setText(model.getName());
         TextView textView = viewHolder.name;
         textView.setText(model.getName());

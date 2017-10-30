@@ -23,7 +23,7 @@ public class PokemonsFavoritesAdapter extends FirebaseRecyclerAdapter <Pokemon,P
 
     @Override
     protected void populateViewHolder(PokemonsFavoritesAdapter.PokemonHolder viewHolder, Pokemon model, int position) {
-        viewHolder.idf.setText(model.getId());
+      //  viewHolder.idf.setText(model.getId());
         viewHolder.namef.setText(model.getName());
 
     }
