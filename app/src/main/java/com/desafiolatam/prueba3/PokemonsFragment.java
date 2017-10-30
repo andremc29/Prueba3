@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.desafiolatam.prueba3.adapters.PokemonsAdapter;
+import com.desafiolatam.prueba3.data.Nodes;
 
 public class PokemonsFragment extends Fragment {
     public PokemonsFragment() {
@@ -36,7 +37,7 @@ public class PokemonsFragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setHasFixedSize(true);
 
-        PokemonsAdapter adapter = new PokemonsAdapter();
+        PokemonsAdapter adapter = new PokemonsAdapter(new Nodes().pokemons(), getContext());
         recyclerView.setAdapter(adapter);
 
 
