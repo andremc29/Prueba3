@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.desafiolatam.prueba3.adapters.PokemonsFavoritesAdapter;
+import com.desafiolatam.prueba3.data.Nodes;
 
 
 public class PokemonsFavoritesFragment extends Fragment {
@@ -37,7 +38,7 @@ public class PokemonsFavoritesFragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setHasFixedSize(true);
 
-        PokemonsFavoritesAdapter adapter = new PokemonsFavoritesAdapter();
+        PokemonsFavoritesAdapter adapter = new PokemonsFavoritesAdapter(new Nodes().favorites(), getContext());
         recyclerView.setAdapter(adapter);
 
     }
